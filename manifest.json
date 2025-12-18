@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Smart Clothing Filter",
+    "version": "1.0",
+    "description": "Filter clothing by material, length, waist size from product descriptions",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.amazon.com/*",
+          "*://*.zara.com/*",
+          "*://*.hm.com/*",
+          "*://*.nordstrom.com/*",
+          "*://*.asos.com/*"
+        ],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
